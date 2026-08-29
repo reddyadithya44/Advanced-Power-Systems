@@ -260,10 +260,13 @@ void StartTask05(void *argument)
 void StartTask06(void *argument)
 {
   /* USER CODE BEGIN StartTask06 */
+
+
   /* Infinite loop */
   for(;;)
   {
-    osDelay(1);
+	    HAL_GPIO_TogglePin(LED1_GPIO_PORT, LED1_PIN);
+	    osDelay(500);
   }
   /* USER CODE END StartTask06 */
 }
